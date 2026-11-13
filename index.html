@@ -1,60 +1,457 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DP.PORTFOLIO</title>
-    <meta
-      name="description"
-      content="DP.PORTFOLIO — polska edycja autorskiego portfolio fotografii i filmu Dominika Šuškeviča. Przestrzeń, światło, emocja oraz kolaboracja Warszawa."
-    />
-    <meta
-      name="keywords"
-      content="DP.PORTFOLIO, Dominik Šuškevič, fotografia artystyczna, Wania Honcharuk Warszawa, motoryzacja fotografia, portrety, natura, pl.dominikphotofficial.lt"
-    />
-    <meta name="author" content="DP.PORTFOLIO, Dominik Šuškevič" />
-    <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1" />
-    <link rel="canonical" href="https://pl.dominikphotofficial.lt/" />
-    <link rel="alternate" hreflang="lt" href="https://portfolio.dominikphotofficial.lt/" />
-    <link rel="alternate" hreflang="en" href="https://en.dominikphotofficial.lt/" />
-    <link rel="alternate" hreflang="pl" href="https://pl.dominikphotofficial.lt/" />
-    <link rel="alternate" hreflang="ru" href="https://ru.dominikphotofficial.lt/" />
-    <link rel="alternate" hreflang="ko" href="https://kr.dominikphotofficial.lt/" />
-    <link rel="alternate" hreflang="x-default" href="https://portfolio.dominikphotofficial.lt/" />
+    <meta name="description" content="DP.PORTFOLIO — polska edycja autorskiego portfolio fotografii i filmu Dominika Šuškeviča. Przestrzeń, światło, emocja oraz kolaboracja Warszawa.">
+    <meta name="keywords" content="DP.PORTFOLIO, Dominik Šuškevič, Wania Honcharuk Warszawa, fotografia artystyczna, portfolio pl">
+    <meta name="author" content="DP.PORTFOLIO, Dominik Šuškevič">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://pl.dominikphotofficial.lt/">
+    <link rel="alternate" hreflang="lt" href="https://portfolio.dominikphotofficial.lt/">
+    <link rel="alternate" hreflang="en" href="https://en.dominikphotofficial.lt/">
+    <link rel="alternate" hreflang="pl" href="https://pl.dominikphotofficial.lt/">
+    <link rel="alternate" hreflang="ru" href="https://ru.dominikphotofficial.lt/">
+    <link rel="alternate" hreflang="ko" href="https://kr.dominikphotofficial.lt/">
+    <link rel="alternate" hreflang="x-default" href="https://portfolio.dominikphotofficial.lt/">
 
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="pl_PL" />
-    <meta property="og:site_name" content="DP.PORTFOLIO" />
-    <meta property="og:url" content="https://pl.dominikphotofficial.lt/" />
-    <meta property="og:title" content="DP.PORTFOLIO — Fotografia i Film | Polska Edycja" />
-    <meta
-      property="og:description"
-      content="Autorskie portfolio fotografii i filmu Dominika Šuškeviča. Odkryj serie z Polski, Litwy i Łotwy oraz kolaborację Wania Honcharuk | Warszawa."
-    />
-    <meta property="og:image" content="https://i.postimg.cc/65bZ2sxk/Frozen-time.png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="800" />
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pl_PL">
+    <meta property="og:site_name" content="DP.PORTFOLIO">
+    <meta property="og:url" content="https://pl.dominikphotofficial.lt/">
+    <meta property="og:title" content="DP.PORTFOLIO">
+    <meta property="og:description" content="DP.PORTFOLIO — polska edycja autorskiego portfolio fotografii i filmu Dominika Šuškeviča. Przestrzeń, światło, emocja oraz kolaboracja Warszawa.">
+    <meta property="og:image" content="https://i.postimg.cc/65bZ2sxk/Frozen-time.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="800">
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="DP.PORTFOLIO — Fotografia i Film" />
-    <meta
-      name="twitter:description"
-      content="Przestrzeń, światło i emocja. Oficjalne portfolio DP.PORTFOLIO w języku polskim."
-    />
-    <meta name="twitter:image" content="https://i.postimg.cc/65bZ2sxk/Frozen-time.png" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DP.PORTFOLIO">
+    <meta name="twitter:description" content="DP.PORTFOLIO — polska edycja autorskiego portfolio fotografii i filmu Dominika Šuškeviča. Przestrzeń, światło, emocja oraz kolaboracja Warszawa.">
+    <meta name="twitter:image" content="https://i.postimg.cc/65bZ2sxk/Frozen-time.png">
 
-    <link rel="preconnect" href="https://i.postimg.cc" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" type="image/png" href="https://iili.io/fjNLbs4.png" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <link rel="preconnect" href="https://i.postimg.cc">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="https://iili.io/fjNLbs4.png">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "name": "DP.PORTFOLIO",
+      "url": "https://pl.dominikphotofficial.lt/",
+      "inLanguage": "pl",
+      "description": "Autorskie portfolio fotografii i filmu Dominika Šuškeviča w języku polskim. Kolaboracja Warszawa, motoryzacja, dziedzictwo oraz natura.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "DP Corporation"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Dominik Šuškevič"
+      }
+    },
+    {
+      "@type": "Organization",
+      "name": "DP Corporation",
+      "url": "https://pl.dominikphotofficial.lt/",
+      "logo": "https://iili.io/fjNLbs4.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "info@dominikphotofficial.lt",
+        "contactType": "customer service",
+        "url": "https://pl.dominikphotofficial.lt/contacts.html"
+      }
+    }
+  ]
+}
+    </script>
+</head>
+<body class="has-hero">
+    <header id="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo" aria-label="DP.PORTFOLIO — Strona główna">
+                <span class="logo-mark"><img src="https://iili.io/fjNLbs4.png" alt="DP.PORTFOLIO" class="logo-img"></span>
+                <span class="logo-sub">Portfolio</span>
+            </a>
+            <div class="header-right">
+                <nav class="header-langs" aria-label="Język">
+                    <a href="https://portfolio.dominikphotofficial.lt/">LT</a><a href="https://en.dominikphotofficial.lt/">EN</a><a href="https://pl.dominikphotofficial.lt/" class="active-lang" aria-current="page">PL</a><a href="https://ru.dominikphotofficial.lt/">RU</a><a href="https://kr.dominikphotofficial.lt/">KR</a>
+                </nav>
+                <button type="button" class="burger" id="burger-menu" aria-label="Otwórz menu" aria-expanded="false" aria-controls="nav-overlay">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="nav-overlay" id="nav-overlay" aria-hidden="true">
+        <aside class="nav-panel" aria-label="Menu główne">
+            <div>
+                <div class="nav-panel-top">
+                    <span class="nav-panel-kicker">Nawigacja</span>
+                    <button type="button" class="nav-close" aria-label="Zamknij menu">&times;</button>
+                </div>
+                <nav class="mobile-nav">
+                    <a href="index.html" class="nav-link active"><span class="nav-num">01</span><span class="nav-label-text">Prace</span></a>
+                    <a href="frozen-time.html" class="nav-link"><span class="nav-num">02</span><span class="nav-label-text">Frozen Time</span></a>
+                    <a href="about.html" class="nav-link"><span class="nav-num">03</span><span class="nav-label-text">O nas</span></a>
+                    <a href="biography.html" class="nav-link"><span class="nav-num">04</span><span class="nav-label-text">Biografia</span></a>
+                    <a href="https://portfolio.dominikphotofficial.lt/services.html" class="nav-link"><span class="nav-num">05</span><span class="nav-label-text">Usługi</span></a>
+                    <a href="contacts.html" class="nav-link"><span class="nav-num">06</span><span class="nav-label-text">Kontakt</span></a>
+                    <div class="nav-secondary-group">
+                        <a href="privacy-policy.html" class="nav-link nav-secondary"><span class="nav-label-text">Polityka prywatności</span></a>
+                        <a href="terms-of-service.html" class="nav-link nav-secondary"><span class="nav-label-text">Regulamin</span></a>
+                    </div>
+                </nav>
+            </div>
+            <div class="nav-panel-footer">
+                <div class="nav-panel-langs" aria-label="Wybór języka">
+                    <a href="https://portfolio.dominikphotofficial.lt/">LT</a><a href="https://en.dominikphotofficial.lt/">EN</a><a href="https://pl.dominikphotofficial.lt/" class="active-lang" aria-current="page">PL</a><a href="https://ru.dominikphotofficial.lt/">RU</a><a href="https://kr.dominikphotofficial.lt/">KR</a>
+                </div>
+                <div class="nav-panel-contacts">
+                    <a href="mailto:info@dominikphotofficial.lt">info@dominikphotofficial.lt</a>
+                    <a href="https://www.instagram.com/dominikphotofficial/" target="_blank" rel="noopener noreferrer">@dominikphotofficial</a>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <main>
+        <section class="hero" aria-label="Prezentacja portfolio">
+            <div class="hero-slides">
+                <img src="https://i.postimg.cc/B60zcQNx/street-nature-01.jpg" alt="DP.PORTFOLIO — Światło i natura w parku Ąžuolynas" referrerpolicy="no-referrer" class="hero-slide active">
+                <img src="https://i.postimg.cc/PfSbZTLR/IMG-9538.jpg" alt="DP.PORTFOLIO — Žeimenos Žirgai w porannym świetle" referrerpolicy="no-referrer" class="hero-slide">
+                <img src="https://i.postimg.cc/YSRMtRps/autoshow-kaunas-107.jpg" alt="DP.PORTFOLIO — Autoshow Kaunas w obiektywie" referrerpolicy="no-referrer" class="hero-slide">
+            </div>
+            <div class="hero-scrim" aria-hidden="true"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">DP.PORTFOLIO</h1>
+                <p class="hero-descriptors">PRZESTRZEŃ · ŚWIATŁO · EMOCJA</p>
+            </div>
+            <a href="#albums" class="hero-scroll" aria-label="Przewiń do albumów">
+                <span>PRZEWIŃ</span>
+                <span class="hero-scroll-line" aria-hidden="true"></span>
+            </a>
+            <div class="hero-progress" aria-label="Nawigacja slajdów">
+                <button type="button" class="hero-progress-line active" aria-label="Slajd 1"></button>
+                <button type="button" class="hero-progress-line" aria-label="Slajd 2"></button>
+                <button type="button" class="hero-progress-line" aria-label="Slajd 3"></button>
+            </div>
+        </section>
+
+        <section class="booking-block fade-in-up">
+            <span class="feature-kicker">Rejestracja TFP</span>
+            <h2>Twórcze sesje na zasadach współpracy</h2>
+            <div class="divider divider-center"></div>
+            <p>Szukasz wyjątkowych kadrów do swojego portfolio lub chcesz zrealizować oryginalny pomysł wizualny? Zgłoś swój udział w otwartych sesjach TFP.</p>
+            <a href="https://portfolio.dominikphotofficial.lt/tfp-booking.html" class="btn-primary">Zarezerwuj sesję TFP</a>
+        </section>
+
+        <div class="container">
+            <section class="film-promo-board fade-in-up" aria-label="Usługi fotograficzne i wideo">
+                <div class="promo-bg">
+                    <img src="https://i.postimg.cc/Jnv9KRSs/IMG-7441.jpg" alt="Sesje fotograficzne i produkcja wideo DP.PORTFOLIO" loading="lazy" decoding="async" referrerpolicy="no-referrer" class="dp-lazy">
+                </div>
+                <div class="promo-content">
+                    <span class="promo-badge">Usługi</span>
+                    <h2>Sesje fotograficzne i wideo</h2>
+                    <p>Realizujemy kameralne sesje portretowe, dynamiczne reportaże motoryzacyjne oraz autorskie filmy wizerunkowe na terenie Litwy i Polski.</p>
+                    <ul class="feature-list">
+                        <li>Mini, Standard oraz Maksi pakiety fotograficzne</li>
+                        <li>Reportaże motoryzacyjne, wydarzenia i sesje w plenerze</li>
+                        <li>Reżyseria i produkcja filmów krótkometrażowych</li>
+                    </ul>
+                    <div class="board-actions">
+                        <a href="https://portfolio.dominikphotofficial.lt/services.html" class="btn-primary">Zobacz pakiety</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="zeimenos-feature-board fade-in-up" aria-label="Žeimenos Žirgai">
+                <div class="zeimenos-feature-img">
+                    <img src="https://i.postimg.cc/PqvGXfk5/zirgai-zeimenos-02.jpg" alt="Žeimenos Žirgai — projekt partnerski DP.PORTFOLIO" loading="lazy" decoding="async" referrerpolicy="no-referrer" class="dp-lazy">
+                </div>
+                <div class="zeimenos-feature-content">
+                    <span class="zeimenos-badge">Projekt partnerski</span>
+                    <h2>Žeimenos Žirgai</h2>
+                    <p>Autorska seria fotografii konnej i reportażu z malowniczych terenów nad rzeką Żejmianą. Cisza natury, ruch i bliska więź jeźdźca z koniem.</p>
+                    <p class="zeimenos-tag-pills">Jazda konna · Fotografia plenerowa · Nad Żejmianą</p>
+                    <div class="board-actions">
+                        <a href="albums/zeimenos-zirgai.html" class="btn-primary">Otwórz album</a>
+                        <a href="contacts.html" class="zeimenos-phone-link">Kontakt z projektem &rarr;</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="albums" class="albums-section" aria-label="Albumy fotograficzne">
+                <div class="section-header-editorial fade-in-up">
+                    <span class="section-label-caps">Wybrane serie</span>
+                    <span class="section-count-muted">21 serii</span>
+                </div>
+                <div class="album-grid-columns">
+                <a href="albums/wania-honcharuk.html" class="album-card fade-in-up">
+                    <div class="album-card-media">
+                        <img src="https://i.postimg.cc/TwZqtGxT/Wania-honcharuk-album.jpg" alt="Wania Honcharuk | Warszawa" loading="lazy" decoding="async" referrerpolicy="no-referrer" class="dp-lazy">
+                    </div>
+                    <div class="album-card-body">
+                        <h3 class="album-card-title">Wania Honcharuk | Warszawa</h3>
+                        <p class="album-card-meta">Kolaboracja · 15 zdjęć · 2026</p>
+                        <span class="album-card-action">Zobacz album &rarr;</span>
+                    </div>
+                </a>
+                <a href="albums/car-meet-2026-05-26.html" class="album-card fade-in-up">
+                    <div class="album-card-media">
+                        <img src="https://i.postimg.cc/90JLjs3J/IMG-7652.jpg" alt="Car Meet Kaunas 2026" loading="lazy" decoding="async" referrerpolicy="no-referrer" class="dp-lazy">
+                    </div>
+                    <div class="album-card-body">
+                        <h3 class="album-card-title">Car Meet Kaunas 2026</h3>
+                        <p class="album-card-meta">Motoryzacja · 37 zdjęć · 2026</p>
+                        <span class="album-card-action">Zobacz album &rarr;</span>
+                    </div>
+                </a>
+                <a href="albums/zeimenos-zirgai.html" class="album-card fade-in-up">
+                    <div class="album-card-media">
+                        <img src="https://i.postimg.cc/PfSbZTLR/IMG-9538.jpg" alt="Žeimenos Žirgai" loading="lazy" decoding="async" referrerpolicy="no-referrer" class="dp-lazy">
+                    </div>
+                    <div class="album-card-body">
+                        <h3 class="album-card-title">Žeimenos Žirgai</h3>
+                        <p class="album-card-meta">Projekt partnerski · 28 zdjęć · 2025</p>
+                        <span class="album-card-action">Zobacz album &rarr;</span>
+                    </div>
+                </a>
+                <a href="albums/rundale.html" class="album-card fade-in-up">
+                    <div class="album-card-media">
+                        <img src="https://i.postimg.cc/4NqyTsg1/LATVIJA-2025-33.jpg" alt="Pałac w Rundāle" loading="lazy" decoding="async" referrerpolicy="no-referrer" class="dp-lazy">
+                    </div>
+                    <div class="album-card-body">
+                        <h3 class="album-card-title">Pałac w Rundāle</h3>
+                        <p class="album-card-meta">Dziedzictwo · 24 zdjęcia · 2025</p>
+                        <span class="album-card-action">Zobacz album &rarr;</span>
+                    </div>
+                </a>
+                <a href="albums/azuolynas.html" class="album-card fade-in-up">
+                    <div class="album-card-media">
+                        <img src="https://i.postimg.cc/B60zcQNx/street-nature-01.jpg" alt="Dąbrowa (Ąžuolynas)" loading="lazy" decoding="async" referrerpolicy="no-referrer" class="dp-lazy">
+                    </div>
+                    <div class="album-card-body">
+                        <h3 class="album-card-title">Dąbrowa (Ąžuolynas)</h3>
+                        <p class="album-card-meta">Natura i ulica · 51 zdjęć · 2025</p>
+                        <span class="album-card-action">Zobacz album &rarr;</span>
+                    </div>
+                </a>
+                <a href="albums/autoshow-kaunas-09-05.html" class="album-card fade-in-up">
+                    <div class="album-card-media">
+                        <img src="https://i.postimg.cc/YSRMtRps/autoshow-kaunas-107.jpg" alt="Autoshow Kaunas 09.05" loading="lazy" decoding="async" referrerpolicy="no-referrer" class="dp-lazy">
+                    </div>
+                    <div class="album-card-body">
+                        <h3 class="album-card-title">Autoshow Kaunas 09.05</h3>
+                        <p class="album-card-meta">Motoryzacja · 109 zdjęć · 2025</p>
+                        <span class="album-card-action">Zobacz album &rarr;</span>
+                    </div>
+                </a>
+                <a href="albums/valdovu-rumai.html" class="album-card fade-in-up">
+                    <div class="album-card-media">
+                        <img src="https://i.postimg.cc/C5XjhNy7/Vilniaus-muziejus.png" alt="Pałac Wielkich Książąt" loading="lazy" decoding="async" referrerpolicy="no-referrer" class="dp-lazy">
+                    </div>
+                    <div class="album-card-body">
+                        <h3 class="album-card-title">Pałac Wielkich Książąt</h3>
+                        <p class="album-card-meta">Dziedzictwo · 10 zdjęć · 2025</p>
+                        <span class="album-card-action">Zobacz album &rarr;</span>
+                    </div>
+                </a>
+                <a href="albums/azuolyno-parkas.html" class="album-card fade-in-up">
+                    <div class="album-card-media">
+                        <img src="https://i.postimg.cc/8PmLjkfL/street_azuolynas_33.jpg" alt="Park Ąžuolynas" loading="lazy" decoding="async" referrerpolicy="no-referrer" class="dp-lazy">
+                    </div>
+                    <div class="album-card-body">
+                        <h3 class="album-card-title">Park Ąžuolynas</h3>
+                        <p class="album-card-meta">Natura · 55 zdjęć · 2025</p>
+                        <span class="album-card-action">Zobacz album &rarr;</span>
+                    </div>
+                </a>
+                <a href="albums/cirkliskis.html" class="album-card fade-in-up">
+                    <div class="album-card-media">
+                        <img src="https://i.postimg.cc/x8pRF86C/cirkliskis-01.jpg" alt="Dwór w Cirkliškis" loading="lazy" decoding="async" referrerpolicy="no-referrer" class="dp-lazy">
+                    </div>
+                    <div class="album-card-body">
+                        <h3 class="album-card-title">Dwór w Cirkliškis</h3>
+                        <p class="album-card-meta">Portrety · 14 zdjęć · 2025</p>
+                        <span class="album-card-action">Zobacz album &rarr;</span>
+                    </div>
+                </a>
+                <a href="albums/petrausku-namai.html" class="album-card fade-in-up">
+                    <div class="album-card-media">
+                        <img src="https://i.postimg.cc/8k0XLvTx/miko-ir-kipro-petrausku-namai-01.jpg" alt="Dom Miko i Kiprasa Petrauskasów" loading="lazy" decoding="async" referrerpolicy="no-referrer" class="dp-lazy">
+                    </div>
+                    <div class="album-card-body">
+                        <h3 class="album-card-title">Dom Miko i Kiprasa Petrauskasów</h3>
+                        <p class="album-card-meta">Dziedzictwo · 14 zdjęć · 2025</p>
+                        <span class="album-card-action">Zobacz album &rarr;</span>
+                    </div>
+                </a>
+                <a href="albums/vdu-sodas.html" class="album-card fade-in-up">
+                    <div class="album-card-media">
+                        <img src="https://i.postimg.cc/HL0Fv0Xk/vdu-botanikos-sodas-01.jpg" alt="Ogród Botaniczny VDU" loading="lazy" decoding="async" referrerpolicy="no-referrer" class="dp-lazy">
+                    </div>
+                    <div class="album-card-body">
+                        <h3 class="album-card-title">Ogród Botaniczny VDU</h3>
+                        <p class="album-card-meta">Botanika · 18 zdjęć · 2025</p>
+                        <span class="album-card-action">Zobacz album &rarr;</span>
+                    </div>
+                </a>
+                <a href="albums/sirvetos-parkas.html" class="album-card fade-in-up">
+                    <div class="album-card-media">
+                        <img src="https://i.postimg.cc/NF6TM5F4/srp-02.jpg" alt="Park Regionalny Sirvėta" loading="lazy" decoding="async" referrerpolicy="no-referrer" class="dp-lazy">
+                    </div>
+                    <div class="album-card-body">
+                        <h3 class="album-card-title">Park Regionalny Sirvėta</h3>
+                        <p class="album-card-meta">Krajobraz · 13 zdjęć · 2025</p>
+                        <span class="album-card-action">Zobacz album &rarr;</span>
+                    </div>
+                </a>
+                <a href="albums/sventa.html" class="album-card fade-in-up">
+                    <div class="album-card-media">
+                        <img src="https://i.postimg.cc/QM6Nbm4p/venta-0.jpg" alt="Rzeka Święta (Šventa)" loading="lazy" decoding="async" referrerpolicy="no-referrer" class="dp-lazy">
+                    </div>
+                    <div class="album-card-body">
+                        <h3 class="album-card-title">Rzeka Święta (Šventa)</h3>
+                        <p class="album-card-meta">Natura i woda · 18 zdjęć · 2025</p>
+                        <span class="album-card-action">Zobacz album &rarr;</span>
+                    </div>
+                </a>
+                <a href="albums/winter.html" class="album-card fade-in-up">
+                    <div class="album-card-media">
+                        <img src="https://i.postimg.cc/G3SvWg4k/winter-album-cirkliskis-01.jpg" alt="Zimowa Seria" loading="lazy" decoding="async" referrerpolicy="no-referrer" class="dp-lazy">
+                    </div>
+                    <div class="album-card-body">
+                        <h3 class="album-card-title">Zimowa Seria</h3>
+                        <p class="album-card-meta">Zima · 2 pod-albumy · 2025</p>
+                        <span class="album-card-action">Zobacz album &rarr;</span>
+                    </div>
+                </a>
+                <a href="albums/geles.html" class="album-card fade-in-up">
+                    <div class="album-card-media">
+                        <img src="https://i.postimg.cc/Dy2Q1ryc/Flower-01.jpg" alt="Kwiaty" loading="lazy" decoding="async" referrerpolicy="no-referrer" class="dp-lazy">
+                    </div>
+                    <div class="album-card-body">
+                        <h3 class="album-card-title">Kwiaty</h3>
+                        <p class="album-card-meta">Makro · 26 zdjęć · 2025</p>
+                        <span class="album-card-action">Zobacz album &rarr;</span>
+                    </div>
+                </a>
+                <a href="albums/gandras.html" class="album-card fade-in-up">
+                    <div class="album-card-media">
+                        <img src="https://i.postimg.cc/KYtMgjLT/Gandras-01.jpg" alt="Bocian biały" loading="lazy" decoding="async" referrerpolicy="no-referrer" class="dp-lazy">
+                    </div>
+                    <div class="album-card-body">
+                        <h3 class="album-card-title">Bocian biały</h3>
+                        <p class="album-card-meta">Dzika przyroda · 11 zdjęć · 2025</p>
+                        <span class="album-card-action">Zobacz album &rarr;</span>
+                    </div>
+                </a>
+                <a href="albums/baltoji-kiele.html" class="album-card fade-in-up">
+                    <div class="album-card-media">
+                        <img src="https://i.postimg.cc/KYbYwNkK/bird-01.jpg" alt="Pliszka siwa" loading="lazy" decoding="async" referrerpolicy="no-referrer" class="dp-lazy">
+                    </div>
+                    <div class="album-card-body">
+                        <h3 class="album-card-title">Pliszka siwa</h3>
+                        <p class="album-card-meta">Dzika przyroda · 8 zdjęć · 2025</p>
+                        <span class="album-card-action">Zobacz album &rarr;</span>
+                    </div>
+                </a>
+                <a href="albums/car-meet-kaunas.html" class="album-card fade-in-up">
+                    <div class="album-card-media">
+                        <img src="https://i.postimg.cc/90JLjs3J/IMG-7652.jpg" alt="Car Meet Kaunas — Archiwum" loading="lazy" decoding="async" referrerpolicy="no-referrer" class="dp-lazy">
+                    </div>
+                    <div class="album-card-body">
+                        <h3 class="album-card-title">Car Meet Kaunas — Archiwum</h3>
+                        <p class="album-card-meta">Motoryzacja · 4 serie · 2025–2026</p>
+                        <span class="album-card-action">Zobacz album &rarr;</span>
+                    </div>
+                </a>
+                <a href="albums/bmw-e36.html" class="album-card fade-in-up">
+                    <div class="album-card-media">
+                        <img src="https://i.postimg.cc/vTpSGtSm/BMWE36-01.jpg" alt="BMW E36" loading="lazy" decoding="async" referrerpolicy="no-referrer" class="dp-lazy">
+                    </div>
+                    <div class="album-card-body">
+                        <h3 class="album-card-title">BMW E36</h3>
+                        <p class="album-card-meta">Motoryzacja · 6 zdjęć · 2025</p>
+                        <span class="album-card-action">Zobacz album &rarr;</span>
+                    </div>
+                </a>
+                <a href="albums/noka.html" class="album-card fade-in-up">
+                    <div class="album-card-media">
+                        <img src="https://i.postimg.cc/28SthTZg/noka-car-01.jpg" alt="NOKA Meet" loading="lazy" decoding="async" referrerpolicy="no-referrer" class="dp-lazy">
+                    </div>
+                    <div class="album-card-body">
+                        <h3 class="album-card-title">NOKA Meet</h3>
+                        <p class="album-card-meta">Motoryzacja · 4 zdjęcia · 2025</p>
+                        <span class="album-card-action">Zobacz album &rarr;</span>
+                    </div>
+                </a>
+                <a href="albums/moletu-observatorija.html" class="album-card fade-in-up">
+                    <div class="album-card-media">
+                        <img src="https://i.postimg.cc/3x3PgfJH/Teleskopas-165-cm.png" alt="Obserwatorium w Molėtai" loading="lazy" decoding="async" referrerpolicy="no-referrer" class="dp-lazy">
+                    </div>
+                    <div class="album-card-body">
+                        <h3 class="album-card-title">Obserwatorium w Molėtai</h3>
+                        <p class="album-card-meta">Nauka i architektura · 3 zdjęcia · 2025</p>
+                        <span class="album-card-action">Zobacz album &rarr;</span>
+                    </div>
+                </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer-minimal">
+        <div class="container">
+            <div class="footer-editorial-grid">
+                <div>
+                    <a href="index.html" class="logo" aria-label="DP.PORTFOLIO">
+                        <span class="logo-mark"><img src="https://iili.io/fjNLbs4.png" alt="DP.PORTFOLIO" class="logo-img"></span>
+                        <span class="logo-sub">Portfolio</span>
+                    </a>
+                    <p class="footer-tagline">Autorska fotografia artystyczna, motoryzacja, portrety i kino krótkometrażowe. Przestrzeń · Światło · Emocja.</p>
+                    <a href="mailto:info@dominikphotofficial.lt" class="footer-email">info@dominikphotofficial.lt</a>
+                </div>
+                <div>
+                    <h3 class="footer-col-title">Nawigacja</h3>
+                    <ul class="footer-nav-list">
+                        <li><a href="index.html">Albumy i Prace</a></li>
+                        <li><a href="albums/wania-honcharuk.html">Wania Honcharuk | Warszawa</a></li>
+                        <li><a href="frozen-time.html">Frozen Time: What If</a></li>
+                        <li><a href="about.html">O nas</a></li>
+                        <li><a href="biography.html">Biografia</a></li>
+                        <li><a href="contacts.html">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer-col-title">Informacje</h3>
+                    <ul class="footer-nav-list">
+                        <li><a href="https://portfolio.dominikphotofficial.lt/services.html">Usługi (DP LT)</a></li>
+                        <li><a href="https://portfolio.dominikphotofficial.lt/tfp-booking.html">Rezerwacja TFP</a></li>
+                        <li><a href="https://portfolio.dominikphotofficial.lt/review.html">Opinie klientów</a></li>
+                        <li><a href="privacy-policy.html">Polityka prywatności</a></li>
+                        <li><a href="terms-of-service.html">Regulamin</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-min-bottom">
+                <span>&copy; 2026 DP.PORTFOLIO &middot; Dominik Šuškevič. Wszelkie prawa zastrzeżone.</span>
+                <div class="footer-min-langs" aria-label="Wersje językowe">
+                    <a href="https://portfolio.dominikphotofficial.lt/">LT</a><a href="https://en.dominikphotofficial.lt/">EN</a><a href="https://pl.dominikphotofficial.lt/" class="active-lang">PL</a><a href="https://ru.dominikphotofficial.lt/">RU</a><a href="https://kr.dominikphotofficial.lt/">KR</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
 </html>
-
