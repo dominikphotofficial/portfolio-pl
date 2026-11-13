@@ -1,0 +1,6 @@
+{
+  "name": "DP.PORTFOLIO PL",
+  "description": "Polska wersja portfolio fotograficznego i filmowego DP.PORTFOLIO (pl.dominikphotofficial.lt) — galerie autorskie, kolaboracja z Wanią Honcharukiem w Warszawie oraz projekty artystyczne Dominika Šuškeviča.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
