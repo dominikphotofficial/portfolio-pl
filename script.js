@@ -35,6 +35,7 @@
   var progressLines = Array.prototype.slice.call(
     document.querySelectorAll('.hero-progress-line')
   );
+  var heroCredit = document.getElementById('hero-slide-credit');
   var currentSlide = 0;
   var slideTimer = null;
 
@@ -47,6 +48,10 @@
     progressLines.forEach(function (btn, idx) {
       btn.classList.toggle('active', idx === currentSlide);
     });
+    if (heroCredit) {
+      var activeSlide = slides[currentSlide];
+      heroCredit.textContent = (activeSlide && activeSlide.getAttribute('data-credit')) || '';
+    }
   }
 
   function startSlideshow() {

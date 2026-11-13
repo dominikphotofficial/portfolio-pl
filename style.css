@@ -640,6 +640,17 @@ body:not(.has-hero) #main-header .header-langs a.active-lang {
   margin: 0;
 }
 
+.hero-slide-credit {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.78);
+  margin: var(--sp-3) 0 0;
+  min-height: 1.4em;
+  transition: opacity 300ms var(--ease);
+}
+
 .hero-scroll {
   position: absolute;
   left: 50%;
@@ -1305,6 +1316,27 @@ body:not(.has-hero) #main-header .header-langs a.active-lang {
 
 .gallery-item:hover img {
   transform: scale(1.03);
+}
+
+.gallery-caption {
+  padding: var(--sp-2) var(--sp-3) var(--sp-3);
+  font-size: var(--fs-xs);
+  line-height: 1.55;
+  color: var(--text-muted);
+  background-color: var(--bg);
+  border-top: 1px solid var(--border);
+}
+
+.recommended-board {
+  border-color: var(--accent);
+}
+
+.recommended-note {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin: 0 0 var(--sp-3);
 }
 
 /* Album Info Band / Partner Contacts */
