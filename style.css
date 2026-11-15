@@ -1339,6 +1339,226 @@ body:not(.has-hero) #main-header .header-langs a.active-lang {
   margin: 0 0 var(--sp-3);
 }
 
+/* Interactive Author Story & Photo Reflection Slider (Wania Honcharuk) */
+.hero-slide-credit:empty {
+  display: none;
+}
+
+.vania-story-section {
+  padding-bottom: var(--sp-6);
+}
+
+.vania-story-board {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .vania-story-board {
+    grid-template-columns: 1.08fr 1fr;
+  }
+}
+
+.vania-story-media {
+  position: relative;
+  min-height: 360px;
+  aspect-ratio: 4 / 5;
+  max-height: 620px;
+  width: 100%;
+  overflow: hidden;
+  background-color: #141a1a;
+  cursor: pointer;
+  user-select: none;
+  touch-action: pan-y;
+}
+
+@media (min-width: 768px) {
+  .vania-story-media {
+    min-height: 460px;
+    aspect-ratio: auto;
+  }
+}
+
+.vania-story-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(1.02);
+  transition: opacity 480ms var(--ease), transform 900ms var(--ease);
+  pointer-events: none;
+}
+
+.vania-story-slide.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.vania-story-media:hover .vania-story-slide.active {
+  transform: scale(1.03);
+}
+
+.vania-story-scrim {
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 96px;
+  background: linear-gradient(180deg, rgba(14, 18, 18, 0) 0%, rgba(14, 18, 18, 0.58) 100%);
+  pointer-events: none;
+}
+
+.vania-story-media-bar {
+  position: absolute;
+  left: var(--sp-3);
+  right: var(--sp-3);
+  bottom: var(--sp-3);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+.vania-story-counter {
+  font-variant-numeric: tabular-nums;
+}
+
+.vania-story-progress {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: 3;
+}
+
+.vania-story-progress-bar {
+  height: 100%;
+  width: 25%;
+  background-color: var(--series-accent, var(--accent));
+  transition: width 350ms var(--ease);
+}
+
+.vania-story-content {
+  background-color: var(--bg);
+  padding: var(--sp-4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (min-width: 640px) {
+  .vania-story-content {
+    padding: var(--sp-6);
+  }
+}
+
+.vania-story-title {
+  font-size: var(--fs-xl);
+  margin-bottom: var(--sp-3);
+}
+
+.vania-story-quote {
+  color: var(--text);
+  font-size: var(--fs-base);
+  line-height: 1.7;
+  margin: 0 0 var(--sp-3);
+  min-height: 5.2em;
+  transition: opacity 250ms var(--ease);
+}
+
+.vania-story-caption {
+  color: var(--text-muted);
+  font-size: var(--fs-sm);
+  margin: 0 0 var(--sp-4);
+  transition: opacity 250ms var(--ease);
+}
+
+.vania-story-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  padding-top: var(--sp-4);
+  border-top: 1px solid var(--border);
+}
+
+.vania-story-arrows {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+
+.vania-story-btn {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-size: 1.15rem;
+  cursor: pointer;
+  transition: border-color 250ms var(--ease), background-color 250ms var(--ease), color 250ms var(--ease);
+}
+
+.vania-story-btn:hover {
+  border-color: var(--series-accent, var(--accent));
+  background-color: var(--series-accent, var(--accent));
+  color: #ffffff;
+}
+
+.vania-story-dots {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+
+.vania-story-dot {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+
+.vania-story-dot::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1.5px;
+  background-color: var(--border);
+  transition: background-color 250ms var(--ease);
+}
+
+.vania-story-dot.active::before {
+  background-color: var(--series-accent, var(--accent));
+  height: 2px;
+}
+
+.vania-story-hint {
+  font-size: var(--fs-xs);
+  color: var(--text-faint);
+  margin: var(--sp-3) 0 0;
+}
+
 /* Album Info Band / Partner Contacts */
 .album-info-section {
   padding-block: var(--sp-6);

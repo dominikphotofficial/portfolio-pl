@@ -413,4 +413,134 @@
       });
     }
   }
+
+  /* 9. Interactive Author Story & Photo Reflection Slider (Wania Honcharuk) */
+  var storySlider = document.querySelector('[data-vania-slider]');
+  if (storySlider) {
+    var storyMedia = storySlider.querySelector('.vania-story-media');
+    var storySlides = Array.prototype.slice.call(
+      storySlider.querySelectorAll('.vania-story-slide')
+    );
+    var storyDots = Array.prototype.slice.call(
+      storySlider.querySelectorAll('.vania-story-dot')
+    );
+    var storyTitle = storySlider.querySelector('[data-story-title]');
+    var storyQuote = storySlider.querySelector('[data-story-quote]');
+    var storyCaption = storySlider.querySelector('[data-story-caption]');
+    var storyCounter = storySlider.querySelector('[data-story-counter]');
+    var storyProgressBar = storySlider.querySelector('[data-story-progress]');
+    var storyPrev = storySlider.querySelector('[data-story-prev]');
+    var storyNext = storySlider.querySelector('[data-story-next]');
+    var storyIndex = 0;
+    var storyTimer = null;
+    var storyTouchStartX = null;
+
+    function renderStorySlide(idx) {
+      if (!storySlides.length) return;
+      storyIndex = (idx + storySlides.length) % storySlides.length;
+      storySlides.forEach(function (slide, i) {
+        slide.classList.toggle('active', i === storyIndex);
+      });
+      storyDots.forEach(function (dot, i) {
+        dot.classList.toggle('active', i === storyIndex);
+        dot.setAttribute('aria-pressed', i === storyIndex ? 'true' : 'false');
+      });
+
+      var active = storySlides[storyIndex];
+      if (storyTitle) storyTitle.textContent = active.getAttribute('data-title') || '';
+      if (storyQuote) storyQuote.textContent = active.getAttribute('data-quote') || '';
+      if (storyCaption) storyCaption.textContent = active.getAttribute('data-note') || '';
+      if (storyCounter) {
+        storyCounter.textContent = pad2(storyIndex + 1) + ' / ' + pad2(storySlides.length);
+      }
+      if (storyProgressBar) {
+        storyProgressBar.style.width =
+          ((storyIndex + 1) / storySlides.length) * 100 + '%';
+      }
+    }
+
+    function startStoryAuto() {
+      if (prefersReduced || storySlides.length <= 1) return;
+      if (storyTimer) window.clearInterval(storyTimer);
+      storyTimer = window.setInterval(function () {
+        renderStorySlide(storyIndex + 1);
+      }, 5500);
+    }
+
+    function stopStoryAuto() {
+      if (storyTimer) {
+        window.clearInterval(storyTimer);
+        storyTimer = null;
+      }
+    }
+
+    renderStorySlide(0);
+    startStoryAuto();
+
+    if (storyMedia) {
+      storyMedia.addEventListener('click', function () {
+        renderStorySlide(storyIndex + 1);
+        startStoryAuto();
+      });
+
+      storyMedia.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          renderStorySlide(storyIndex + 1);
+          startStoryAuto();
+        } else if (e.key === 'ArrowRight') {
+          renderStorySlide(storyIndex + 1);
+          startStoryAuto();
+        } else if (e.key === 'ArrowLeft') {
+          renderStorySlide(storyIndex - 1);
+          startStoryAuto();
+        }
+      });
+
+      storyMedia.addEventListener(
+        'touchstart',
+        function (e) {
+          if (e.touches && e.touches[0]) {
+            storyTouchStartX = e.touches[0].clientX;
+          }
+        },
+        { passive: true }
+      );
+
+      storyMedia.addEventListener('touchend', function (e) {
+        if (storyTouchStartX === null || !e.changedTouches || !e.changedTouches[0]) return;
+        var dx = e.changedTouches[0].clientX - storyTouchStartX;
+        if (Math.abs(dx) > 40) {
+          renderStorySlide(storyIndex + (dx > 0 ? -1 : 1));
+          startStoryAuto();
+        }
+        storyTouchStartX = null;
+      });
+    }
+
+    if (storyPrev) {
+      storyPrev.addEventListener('click', function () {
+        renderStorySlide(storyIndex - 1);
+        startStoryAuto();
+      });
+    }
+
+    if (storyNext) {
+      storyNext.addEventListener('click', function () {
+        renderStorySlide(storyIndex + 1);
+        startStoryAuto();
+      });
+    }
+
+    storyDots.forEach(function (dot, i) {
+      dot.addEventListener('click', function () {
+        renderStorySlide(i);
+        startStoryAuto();
+      });
+    });
+
+    storySlider.addEventListener('mouseenter', stopStoryAuto);
+    storySlider.addEventListener('mouseleave', startStoryAuto);
+  }
 })();
+
